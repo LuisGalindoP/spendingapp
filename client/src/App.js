@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+//Imports for libraries
+import React, {useState} from 'react';
+
+//Imports for components
+import ExpensesCategories from './components/ExpensesCategories';
+
 
 function App() {
+    //States to share
+    const [allExpenses, setAllExpenses] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Test for tailwind</h1>
+        <ExpensesCategories
+            allExpenses = {allExpenses}
+            setAllExpenses = {setAllExpenses}
+        />
     </div>
   );
 }
